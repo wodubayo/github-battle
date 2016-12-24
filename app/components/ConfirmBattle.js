@@ -1,11 +1,10 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
-var styles = require('../styles');
-var Link = require('react-router').Link;
-var UserDetails = require('./UserDetails');
-var UserDetailsWrapper = require('./UserDetailsWrapper');
-var MainContainer = require('./MainContainer');
-var Loading = require('./Loading');
+import React, { PropTypes } from 'react'
+import { space } from '../styles'
+import { Link } from 'react-router'
+import UserDetails from './UserDetails'
+import UserDetailsWrapper from './UserDetailsWrapper'
+import MainContainer from './MainContainer'
+import Loading from './Loading'
 
 function ConfirmBattle(props) {
     return props.isLoading === true
@@ -21,10 +20,10 @@ function ConfirmBattle(props) {
                 </UserDetailsWrapper>
             </div>
             <div className="col-sm-8 col-sm-offset-2">
-                <div className="col-sm-12" style={styles.space}>
+                <div className="col-sm-12" style={space}>
                     <button className="btn btn-success btn-lg" onClick={props.onInitiateBattle}>Initiate Battle!</button>
                 </div>
-                <div className="col-sm-12" style={styles.space}>
+                <div className="col-sm-12" style={space}>
                     <Link to='/playerOne'>
                         <button className="btn btn-danger btn-lg">Reselect Players</button>
                     </Link>
@@ -39,4 +38,4 @@ ConfirmBattle.propTypes = {
     onInitiateBattle: PropTypes.func.isRequired
 }
 
-module.exports = ConfirmBattle;
+export default ConfirmBattle

@@ -1,7 +1,7 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var routes = require('./config/routes');
-var Raven = require('raven-js');
+import React from 'react'
+import ReactDOM from 'react-dom'
+import routes from './config/routes'
+import Raven from 'raven-js'
 
 var sentryKey = '4038eb8f514a4cf4b80ff4977e5bfbcb';
 var sentryApp = '108496';
